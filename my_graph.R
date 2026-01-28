@@ -1,15 +1,13 @@
 #load packages
 library(ggplot2)
 
-
-#create plot
-ggplot(mtcars, aes(x = cyl, y = mpg)) +
-  geom_point(size = 3) +
-  geom_smooth(method = "lm", se = FALSE) +
+#create visual for mtcars
+ggplot(mtcars, aes(x = factor(cyl), y = mpg)) +
+  geom_boxplot(fill = "skyblue") +
+  geom_jitter(width = 0.1, alpha = 0.6) +
   labs(
-    title = "Relationship between MPG and Cylinders",
+    title = "MPG by Number of Cylinders",
     x = "Cylinders",
-    y = "MPG"
+    y = "Miles per Gallon (MPG)"
   ) +
   theme_minimal()
-
