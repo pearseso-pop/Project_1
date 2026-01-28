@@ -11,3 +11,4 @@ ggplot(mtcars, aes(x = factor(cyl), y = mpg)) +
     y = "Miles per Gallon (MPG)"
   ) +
   theme_minimal()
+
